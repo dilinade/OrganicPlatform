@@ -120,7 +120,7 @@ class Product extends Component {
                   />
                   <Typography component="p" type="subheading" className={classes.subheading}>
                     {this.state.product.description}<br/>
-                    <span className={classes.price}>$ {this.state.product.price}</span>
+                    <span className={classes.price}>Rs. {this.state.product.price}</span>
                     <Link to={'/shops/'+this.state.product.shop._id} className={classes.link}>
                       <span>
                         <Icon className={classes.icon}>shopping_basket</Icon> {this.state.product.shop.name}

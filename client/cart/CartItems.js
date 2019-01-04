@@ -145,8 +145,8 @@ class CartItems extends Component {
                 <CardContent className={classes.content}>
                   <Link to={'/product/'+item.product._id}><Typography type="title" component="h3" className={classes.productTitle} color="primary">{item.product.name}</Typography></Link>
                   <div>
-                    <Typography type="subheading" component="h3" className={classes.price} color="primary">$ {item.product.price}</Typography>
-                    <span className={classes.itemTotal}>${item.product.price * item.quantity}</span>
+                    <Typography type="subheading" component="h3" className={classes.price} color="primary">Rs. {item.product.price}</Typography>
+                    <span className={classes.itemTotal}> Rs.{item.product.price * item.quantity}</span>
                     <span className={classes.itemShop}>Shop: {item.product.shop.name}</span>
                   </div>
                 </CardContent>
@@ -171,7 +171,7 @@ class CartItems extends Component {
           </span>})
         }
         <div className={classes.checkout}>
-          <span className={classes.total}>Total: ${this.getTotal()}</span>
+          <span className={classes.total}>Total: Rs.{this.getTotal()}</span>
           {!this.props.checkout && (auth.isAuthenticated()?
             <Button color="secondary" variant="raised" onClick={this.openCheckout}>Checkout</Button>
             :

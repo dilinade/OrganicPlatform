@@ -11,12 +11,16 @@ const styles = theme => ({
   root: {
     flexGrow: 1,
     margin: 30,
-  }
+  },
+    cat:{
+    backgroundColor:'#fff'
+    }
+
 })
 
 class Home extends Component {
   state={
-    suggestionTitle: "Latest Products",
+    suggestionTitle: "Latest Fertilizer",
     suggestions: [],
     categories: []
   }
@@ -42,7 +46,7 @@ class Home extends Component {
       <div className={classes.root}>
         <Grid container spacing={24}>
           <Grid item xs={8} sm={8}>
-            <Search categories={this.state.categories}/>
+            <Search categories={this.state.categories} classes={classes.cat}/>
             <Categories categories={this.state.categories}/>
           </Grid>
           <Grid item xs={4} sm={4}>

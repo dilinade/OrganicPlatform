@@ -1,8 +1,8 @@
 {
   "name": "mern-marketplace",
   "version": "1.0.0",
-  "description": "A MERN stack based online marketplace application",
-  "author": "Shama Hoque",
+  "description": "Chemifree platform",
+  "author": "Dilina Dehigama",
   "license": "MIT",
   "keywords": [
     "react",
@@ -13,9 +13,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/shamahoque/mern-marketplace.git"
+    "url": "https://github.com/dilinade/OrganicPlatform.git"
   },
-  "homepage": "https://github.com/shamahoque/mern-marketplace",
+  "homepage": "https://github.com/dilinade/OrganicPlatform",
   "main": "./dist/server.generated.js",
   "scripts": {
     "development": "nodemon",
@@ -34,7 +34,7 @@
     "babel-preset-stage-2": "6.24.1",
     "file-loader": "1.1.11",
     "nodemon": "1.17.3",
-    "webpack": "4.6.0",
+    "webpack": "^4.6.0",
     "webpack-cli": "2.0.15",
     "webpack-dev-middleware": "3.1.3",
     "webpack-hot-middleware": "2.22.1",
@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "body-parser": "1.18.2",
+    "chart.js": "^2.7.3",
     "compression": "1.7.2",
     "cookie-parser": "1.4.3",
     "cors": "2.8.4",
@@ -53,15 +54,27 @@
     "lodash": "4.17.10",
     "material-ui": "1.0.0-beta.43",
     "material-ui-icons": "1.0.0-beta.36",
+    "mongodb": "^3.1.10",
     "mongoose": "5.0.16",
     "query-string": "6.0.0",
+    "randomstring": "^1.1.5",
     "react": "16.3.2",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "16.3.2",
     "react-hot-loader": "4.1.2",
+    "react-responsive-carousel": "^3.1.43",
     "react-router": "4.2.0",
     "react-router-dom": "4.2.2",
     "react-stripe-elements": "1.6.0",
+    "react-verification-code-input": "^1.1.1",
     "request": "2.85.0",
-    "stripe": "5.8.0"
+    "stripe": "5.8.0",
+    "twilio": "^3.26.0",
+    "typeface-roboto": "0.0.54",
+    "webpack": "^4.6.0",
+    "webpack-cli": "2.0.15",
+    "webpack-dev-middleware": "3.1.3",
+    "webpack-hot-middleware": "2.22.1",
+    "webpack-node-externals": "1.7.2"
   }
 }

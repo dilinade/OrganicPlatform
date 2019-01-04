@@ -13,7 +13,7 @@ import cart from './../cart/cart-helper'
 
 const isActive = (history, path) => {
   if (history.location.pathname == path)
-    return {color: '#bef67a'}
+    return {color: '#B4E7CE'}
   else
     return {color: '#ffffff'}
 }
@@ -27,7 +27,7 @@ const Menu = withRouter(({history}) => (
   <AppBar position="static">
     <Toolbar>
       <Typography type="title" color="inherit">
-        MERN Marketplace
+        Saraboomi Agro
       </Typography>
       <div>
         <Link to="/">
@@ -35,9 +35,7 @@ const Menu = withRouter(({history}) => (
             <HomeIcon/>
           </IconButton>
         </Link>
-        <Link to="/shops/all">
-          <Button style={isActive(history, "/shops/all")}>All Shops</Button>
-        </Link>
+        
         <Link to="/cart">
           <Button style={isActive(history, "/cart")}>
             Cart

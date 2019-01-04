@@ -147,8 +147,8 @@ class Order extends Component {
                         <div className={classes.details}>
                           <CardContent className={classes.content}>
                             <Link to={'/product/'+item.product._id}><Typography type="title" component="h3" className={classes.productTitle} color="primary">{item.product.name}</Typography></Link>
-                            <Typography type="subheading" component="h3" className={classes.itemShop} color="primary">$ {item.product.price} x {item.quantity}</Typography>
-                            <span className={classes.itemTotal}>${item.product.price * item.quantity}</span>
+                            <Typography type="subheading" component="h3" className={classes.itemShop} color="primary">Rs. {item.product.price} x {item.quantity}</Typography>
+                            <span className={classes.itemTotal}>Rs.{item.product.price * item.quantity}</span>
                             <span className={classes.itemShop}>Shop: {item.shop.name}</span>
                             <Typography type="subheading" component="h3" color={item.status == "Cancelled" ? "error":"secondary"}>Status: {item.status}</Typography>
                           </CardContent>
@@ -158,7 +158,7 @@ class Order extends Component {
                     </span>})
                   }
                   <div className={classes.checkout}>
-                    <span className={classes.total}>Total: ${this.getTotal()}</span>
+                    <span className={classes.total}>Total: Rs.{this.getTotal()}</span>
                   </div>
                 </Card>
             </Grid>

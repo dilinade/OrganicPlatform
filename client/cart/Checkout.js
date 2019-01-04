@@ -46,11 +46,13 @@ const styles = theme => ({
 class Checkout extends Component {
   state = {
     checkoutDetails: {
+        phone:'',
       customer_name: '',
       customer_email:'',
       delivery_address: { street: '', city: '', state: '', zipcode: '', country:''}
     },
     error: ''
+
   }
   componentDidMount = () => {
     let user = auth.isAuthenticated().user
@@ -72,6 +74,11 @@ class Checkout extends Component {
     checkoutDetails.delivery_address[name] = event.target.value || undefined
     this.setState({checkoutDetails: checkoutDetails})
   }
+    handlePhone = () => event => {
+        let checkoutDetails = this.state.checkoutDetails
+         checkoutDetails.phone = event.target.value || undefined
+        this.setState({checkoutDetails: checkoutDetails})
+    }
 
   render() {
     const {classes} = this.props
@@ -90,6 +97,7 @@ class Checkout extends Component {
         <TextField id="state" label="State" className={classes.addressField} value={this.state.checkoutDetails.delivery_address.state} onChange={this.handleAddressChange('state')} margin="normal"/><br/>
         <TextField id="zipcode" label="Zip Code" className={classes.addressField} value={this.state.checkoutDetails.delivery_address.zipcode} onChange={this.handleAddressChange('zipcode')} margin="normal"/>
         <TextField id="country" label="Country" className={classes.addressField} value={this.state.checkoutDetails.delivery_address.country} onChange={this.handleAddressChange('country')} margin="normal"/>
+          <TextField id="phone" label="Mobile Number" className={classes.addressField} value={this.state.checkoutDetails.phone} onChange={this.handlePhone}  margin="normal"/>
         <br/> {
             this.state.error && (<Typography component="p" color="error">
                 <Icon color="error" className={classes.error}>error</Icon>

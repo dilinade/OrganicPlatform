@@ -60,7 +60,7 @@ class Products extends Component {
               <Link to={"/product/"+product._id}><img className={classes.image} src={'/api/product/image/'+product._id} alt={product.name} /></Link>
               <GridListTileBar className={classes.tileBar}
                 title={<Link to={"/product/"+product._id} className={classes.tileTitle}>{product.name}</Link>}
-                subtitle={<span>$ {product.price}</span>}
+                subtitle={<span>Rs. {product.price}</span>}
                 actionIcon={
                   <AddToCart item={product}/>
                 }

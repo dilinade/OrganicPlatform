@@ -4,8 +4,17 @@ import errorHandler from './../helpers/dbErrorHandler'
 import request from 'request'
 import config from './../../config/config'
 import stripe from 'stripe'
+import sms from './../helpers/sms'
 
 const myStripe = stripe(config.stripe_test_secret_key)
+
+
+const sendSMS = (req, res, next) => {
+  const code = req.body.code
+    const number = req.body.phone
+      //sms.sendSMS("Your verification code is "+ code,number)
+
+}
 
 const create = (req, res, next) => {
   const user = new User(req.body)
@@ -15,7 +24,9 @@ const create = (req, res, next) => {
         error: errorHandler.getErrorMessage(err)
       })
     }
+      console.log("Created")
     res.status(200).json({
+
       message: "Successfully signed up!"
     })
   })
@@ -177,5 +188,6 @@ export default {
   isSeller,
   stripe_auth,
   stripeCustomer,
-  createCharge
+  createCharge,
+    sendSMS
 }
